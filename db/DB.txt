@@ -1,0 +1,53 @@
+CREATE TABLE login
+(
+id int(9) NOT NULL auto_increment,
+userName VARCHAR(40) NOT NULL,
+pass VARCHAR(40) NOT NULL,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE employees
+(
+ID int(9) NOT NULL auto_increment,
+employeeName VARCHAR(40) NOT NULL,
+employeeId VARCHAR(40) NOT NULL,
+contactNumber VARCHAR(40) NOT NULL,
+email VARCHAR(40) NOT NULL,
+PRIMARY KEY(ID)
+);
+
+
+CREATE TABLE registers
+(
+Id int(9) NOT NULL auto_increment,
+CompanyName VARCHAR(40) NOT NULL,
+LicenceNo VARCHAR(40) NOT NULL,
+Name VARCHAR(40) NOT NULL,
+FatherName VARCHAR(40) NOT NULL,
+BirthDate VARCHAR(40) NOT NULL,
+ResAddress VARCHAR(255) NOT NULL,
+Village VARCHAR(255) NOT NULL,
+PostOffice VARCHAR(255) NOT NULL,
+Station VARCHAR(255) NOT NULL,
+District VARCHAR(255) NOT NULL,
+Education VARCHAR(40) NOT NULL,
+Nationality VARCHAR(40) NOT NULL,
+Religion VARCHAR(20) NOT NULL,
+Bank VARCHAR(100) NOT NULL,
+BankBranch VARCHAR(100) NOT NULL,
+AccountNo VARCHAR(40) NOT NULL,
+Date VARCHAR(40) NOT NULL,
+Photo VARCHAR(40) NOT NULL,
+DeclareCon VARCHAR(40) NOT NULL,
+LawDeclare VARCHAR(40) NOT NULL,
+PRIMARY KEY(Id)
+);
+
+
+
+
+
+INSERT INTO 
+login(userName, pass) 
+VALUES
+("mrinmoi","mrinmoi1234");

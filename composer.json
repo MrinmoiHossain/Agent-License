@@ -1,0 +1,11 @@
+{
+  "autoload":{
+    "psr-4":{
+      "Agent\\":"Src"
+    }
+  },
+  "require": {
+    "mpdf/mpdf": "^6.1",
+    "fzaninotto/faker": "^1.6"
+  }
+}
