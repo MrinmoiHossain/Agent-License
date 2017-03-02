@@ -38,12 +38,12 @@ include_once('header.php');
                 <div class="form-group">
                     <label class="col-md-2 control-label" style="line-height: 0px !important; margin-bottom: 25px; text-align: left;">Date of Birth</label>
                     <div class="col-md-4">
-                        <input name = "birth" type="date" id="datepicker" class="form-control" placeholder="Date of Birth">
+                        <input name = "birth" type="date" id="datepicker" class="form-control" placeholder="Date of Birth" value="<?php echo $faker->date('d-m-Y');?>">
                     </div>
 
                     <label class="col-md-2 control-label" style="line-height: 0px !important; margin-bottom: 25px; text-align: left;">Education</label>
                     <div class="col-md-4">
-                        <input name = "education" type="text" class="form-control" placeholder="Educational Qualification">
+                        <input name = "education" type="text" class="form-control" placeholder="Educational Qualification" value="<?php echo $faker->companySuffix;?>">
                         <h5>(Photocopy of Certificate to be duly attested by any First Class Gazetted Officer)</h5>
                     </div>
                 </div>
@@ -82,13 +82,18 @@ include_once('header.php');
 
                 <div class="form-group">
                     <label class="col-md-2 control-label" style="line-height: 0px !important; margin-bottom: 25px; text-align: left;">Account No</label>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <input name = "acNo" type="text" class="form-control" placeholder="Account Number" value="<?php echo $faker->bankAccountNumber;?>">
                     </div>
 
-                    <label class="col-md-2 control-label" style="line-height: 0px !important; margin-bottom: 25px; text-align: left;">Date</label>
-                    <div class="col-md-4">
+                    <label class="col-md-1 control-label" style="line-height: 0px !important; margin-bottom: 25px; text-align: left;">Date</label>
+                    <div class="col-md-2">
                         <input name = "date" id="dateCount" type="date" class="form-control" placeholder="Date">
+                    </div>
+
+                    <label class="col-md-2 control-label" style="line-height: 0px !important; margin-bottom: 25px; text-align: left;">Exp Date</label>
+                    <div class="col-md-2">
+                        <input name = "expDate" id="dateExp" type="date" class="form-control" placeholder="Date">
                     </div>
                 </div>
 

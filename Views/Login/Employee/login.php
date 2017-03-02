@@ -3,9 +3,10 @@ include_once('../../../vendor/autoload.php');
 
 use Agent\DB\DB;
 use Agent\Employee\Employee;
+use Agent\Utility\Sanitize;
 
 DB::connect();
-use Agent\Utility\Sanitize;
+
 
 $data = Sanitize::sanitize($_POST);
 $login = new Employee(DB::$con);

@@ -32,8 +32,10 @@ include_once('header.php');
 ?>
 
         <div class="container tr-padding" style="color: #000;">
-            <input class="glyphicon-search col-md-10" style="margin-top: 15%; margin-bottom: -176px;" placeholder="Search">
-            <input class="col-md-2" style="background-color: grey; margin-top: 15%; margin-bottom: -176px;" type="button" value="Search">
+            <form action="search.php" method="post">
+                <input class="col-md-10" style="margin-top: 15%; margin-bottom: -176px;" name="name" placeholder="Search" autofocus>
+                <button type="submit" class="col-md-2" style="background-color: grey; margin-top: 169px; height: 45px; font-size: 25px; margin-bottom: -176px;">Search</button>
+            </form>
             <table class="table table-bordered" style="margin-top: 20%;">
                 <tr>
                     <th class="active">No</th>

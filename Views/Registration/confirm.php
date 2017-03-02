@@ -24,7 +24,16 @@ include_once('header.php');
             <h4 class="center-block">Post Office : <?php echo $registers[0]['PostOffice']; ?></h4>
             <h4 class="center-block">Police Station : <?php echo $registers[0]['Station']; ?></h4>
             <h4 class="center-block">District : <?php echo $registers[0]['District']; ?></h4>
-            <h2 class="center-block">Is hereby authorized to act as an Insurance Agent in respect of General Insurance Business for one year from Dhaka, date of <?php echo $registers[0]['Date']; ?> day to <?php echo $registers[0]['Date']; ?></h2>
+            <h2 class="center-block">Is hereby authorized to act as an Insurance Agent in respect of General Insurance Business for one year from Dhaka, date of <?php echo $registers[0]['TodayDate']; ?> day to <?php echo $registers[0]['ExpDate']; ?></h2>
+        </div>
+
+        <div class="last-part center-block">
+            <h4 class="center-block sig">Signature of</h4><br/>
+            <h4 class="center-block chair">Chairman</h4>
+            <h4 class="chair">Insurance Development & Regulatory Authority</h4>
+            <h4 class="chair">(IDRA)</h4>
+            <h4 class="chair">Authorised Officer in this</h4>
+            <h4 class="chair">Behalf</h4>
         </div>
 
         <div class="form-group" style="margin-left: 35%;">

@@ -25,6 +25,23 @@
             $(document).ready(function() {
                 $("#dateCount").datepicker();
             });
+            $(document).ready(function() {
+                $("#dateExp").datepicker();
+            });
         </script>
+        <style>
+            .last-part{
+                margin-top: 5%;
+                float: right;
+                font-weight: lighter;
+            }
+            .sig{
+                text-align: center;
+                margin-bottom: -7px;
+            }
+            .chair{
+                text-align: center;
+            }
+        </style>
     </head>
     <body>

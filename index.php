@@ -32,7 +32,7 @@ include_once('header.php');
                         <input name="user" type="text" required autocomplete="off"/>
                     </div>
                     <div class="field-wrap">
-                        <label>Password<span class="req">*</span></label>
+                        <label>ID Number<span class="req">*</span></label>
                         <input name="pass" type="password" required autocomplete="off"/>
                     </div>
 

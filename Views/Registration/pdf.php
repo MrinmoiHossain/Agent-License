@@ -60,23 +60,28 @@ $content15 = <<<eight
     </h4>
     <h2 class="center-block">Is hereby authorized to act as an Insurance Agent in respect of General Insurance Business for one year from Dhaka, date of 
 eight;
-$content16 = $registers[0]['Date'];
+$content16 = $registers[0]['TodayDate'];
 
 $content17 = <<<nin
      day to 
 nin;
-$content18 = $registers[0]['Date'];;
+$content18 = $registers[0]['ExpDate'];
 
-
-
-
-
-
+$content19 = <<<ten
+        <div class="last-part center-block" style="margin-top: 10%;">
+            <h4 class="center-block sig" style="margin-bottom: -20px:">Signature of</h4><br/>
+            <h4 class="center-block chair">Chairman</h4>
+            <h4 class="chair">Insurance Development & Regulatory Authority</h4>
+            <h4 class="chair">(IDRA)</h4>
+            <h4 class="chair">Authorised Officer in this</h4>
+            <h4 class="chair">Behalf</h4>
+        </div>
+ten;
 
 $content20 = "</div>";
 
 $mpdf = new mPDF();
-$mpdf->WriteHTML($content1.$content2.$content3.$content4.$content5.$content6.$content7.$content8.$content9.$content10.$content11.$content12.$content13.$content14.$content15.$content16.$content17.$content18.$content20);
+$mpdf->WriteHTML($content1.$content2.$content3.$content4.$content5.$content6.$content7.$content8.$content9.$content10.$content11.$content12.$content13.$content14.$content15.$content16.$content17.$content18.$content19.$content20);
 $mpdf->Output();
 ?>
 <?php

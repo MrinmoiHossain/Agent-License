@@ -12,8 +12,8 @@ class Registration
 
     public function store($data){
         try{
-            $stmt = $this->con->prepare("INSERT INTO registers(CompanyName, LicenceNo, Name, FatherName, BirthDate, ResAddress, Village, PostOffice, Station, District, Education, Nationality, Religion, Bank, BankBranch, AccountNo, Date, Photo, DeclareCon, LawDeclare) VALUES
-                                              (:CompanyName , :LicenceNo , :Name, :FatherName, :BirthDate, :ResAddress, :Village, :PostOffice, :Station, :District, :Education, :Nationality, :Religion, :Bank, :BankBranch, :AccountNo, :Date, :Photo, :DeclareCon, :LawDeclare)");
+            $stmt = $this->con->prepare("INSERT INTO registers(CompanyName, LicenceNo, Name, FatherName, BirthDate, ResAddress, Village, PostOffice, Station, District, Education, Nationality, Religion, Bank, BankBranch, AccountNo, TodayDate, ExpDate, Photo, DeclareCon, LawDeclare) VALUES
+                                              (:CompanyName , :LicenceNo , :Name, :FatherName, :BirthDate, :ResAddress, :Village, :PostOffice, :Station, :District, :Education, :Nationality, :Religion, :Bank, :BankBranch, :AccountNo, :TodayDate, :ExpDate, :Photo, :DeclareCon, :LawDeclare)");
             $stmt->bindparam(":CompanyName", $data['companyName']);
             $stmt->bindparam(":LicenceNo", $data['licenceNum']);
             $stmt->bindparam(":Name", $data['name']);
@@ -30,7 +30,8 @@ class Registration
             $stmt->bindparam(":Bank", $data['bank']);
             $stmt->bindparam(":BankBranch", $data['branch']);
             $stmt->bindparam(":AccountNo", $data['acNo']);
-            $stmt->bindparam(":Date", $data['date']);
+            $stmt->bindparam(":TodayDate", $data['date']);
+            $stmt->bindparam(":ExpDate", $data['expDate']);
             $stmt->bindparam(":Photo", $data['photoCheck']);
             $stmt->bindparam(":DeclareCon", $data['declareCheck']);
             $stmt->bindparam(":LawDeclare", $data['lawCheck']);
@@ -72,6 +73,15 @@ class Registration
         }
 
         return $results;
+    }
+
+    public function search($data){
+        $stmt = $this->con->prepare("SELECT * FROM registers WHERE CompanyName=:CompanyName");
+        $stmt->bindparam(":CompanyName", $data);
+        $stmt->execute();
+
+        $singleData = $stmt->fetch(\PDO::FETCH_ASSOC);
+        return $singleData;
     }
 
 }

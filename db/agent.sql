@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2017 at 09:57 PM
+-- Generation Time: Mar 02, 2017 at 03:12 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -64,7 +64,8 @@ INSERT INTO `login` (`id`, `userName`, `pass`) VALUES
 (1, 'mrinmoi', 'mrinmoi123'),
 (2, 'mokit', 'mokit123'),
 (3, 'mokit', 'mokit'),
-(4, 'sujan', 'sujan123');
+(4, 'sujan', 'sujan123'),
+(5, 'hasnat', 'hasnath');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,8 @@ CREATE TABLE `registers` (
   `Bank` varchar(100) NOT NULL,
   `BankBranch` varchar(100) NOT NULL,
   `AccountNo` varchar(40) NOT NULL,
-  `Date` varchar(40) NOT NULL,
+  `TodayDate` varchar(40) NOT NULL,
+  `ExpDate` varchar(40) NOT NULL,
   `Photo` varchar(40) NOT NULL,
   `DeclareCon` varchar(40) NOT NULL,
   `LawDeclare` varchar(40) NOT NULL
@@ -100,23 +102,11 @@ CREATE TABLE `registers` (
 -- Dumping data for table `registers`
 --
 
-INSERT INTO `registers` (`Id`, `CompanyName`, `LicenceNo`, `Name`, `FatherName`, `BirthDate`, `ResAddress`, `Village`, `PostOffice`, `Station`, `District`, `Education`, `Nationality`, `Religion`, `Bank`, `BankBranch`, `AccountNo`, `Date`, `Photo`, `DeclareCon`, `LawDeclare`) VALUES
-(1, 'Dhaka Insurance', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '1993-01-01', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '2016-08-22', 'yes', 'yes', 'yes'),
-(2, 'Dhaka Insurance', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '24/01/1993', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '22/08/2016', 'yes', 'yes', 'yes'),
-(3, 'Dhaka Insurance', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '24/01/1993', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '22/08/2016', 'yes', 'yes', 'yes'),
-(4, 'Dhaka Insurance', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '24/01/1993', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '22/08/2016', 'yes', 'yes', 'yes'),
-(5, 'Dhaka Insurance', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '24/01/1993', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '22/08/2016', 'yes', 'yes', 'yes'),
-(6, 'Dhaka Insurance', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '24/01/1993', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '22/08/2016', 'yes', 'yes', 'yes'),
-(8, 'Dhaka Insurance', 'XM2017/B', 'Rubel Hossain', 'Md. Shafiquzzman Chowdhury', '1993-01-01', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '22/08/2016', 'on', 'on', 'on'),
-(9, 'Dhaka', 'LM234', 'Mrinmoi Hossain Mokit', 'Md. Shafiquzzman Chowdhury', '02/15/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Islam', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/13/2017', 'yes', 'yes', 'yes'),
-(10, 'Dhaka Insurance', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Hindu', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/06/2017', 'yes', 'yes', 'yes'),
-(11, 'Dhaka Insurance Ltd', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Christian', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/05/2017', 'yes', 'yes', 'yes'),
-(12, 'Dhaka Insurance Ltd', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Christian', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/05/2017', 'yes', 'yes', 'yes'),
-(13, 'Dhaka Insurance Ltd', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Christian', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/05/2017', 'yes', 'yes', 'yes'),
-(14, 'Dhaka Insurance Ltd', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Christian', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/05/2017', 'yes', 'yes', 'yes'),
-(15, 'Dhaka Insurance Ltd', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Christian', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/05/2017', 'yes', 'yes', 'yes'),
-(16, 'Dhaka Insurance Ltd', 'XM2017/B', 'Md. Sabbir Zaman Chowdhury', 'Md. Shafiquzzman Chowdhury', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Christian', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/05/2017', 'yes', 'yes', 'yes'),
-(17, 'Dhaka Insurance Ltd', 'LN432', 'Mrinmoi Hossain Mokit', 'Md. Sumon Ahmed', '02/13/2017', 'House-528, Road-12, Baitul Aman Housing, Adabor, Dhaka', 'Sundarpur', 'Sundarpur', 'Moheshpur', 'Dhaka', 'B.Sc in Physics', 'Bangladeshi', 'Christian', 'Shahjalal Islami Bank Ltd.', 'Dhanmondi', '68672', '02/05/2017', 'yes', 'yes', 'yes');
+INSERT INTO `registers` (`Id`, `CompanyName`, `LicenceNo`, `Name`, `FatherName`, `BirthDate`, `ResAddress`, `Village`, `PostOffice`, `Station`, `District`, `Education`, `Nationality`, `Religion`, `Bank`, `BankBranch`, `AccountNo`, `TodayDate`, `ExpDate`, `Photo`, `DeclareCon`, `LawDeclare`) VALUES
+(1, 'Runolfsson, Sipes and Shields', 'SJ12523', 'Mr. Durward Deckow IV', 'Aliya Purdy', '17-06-2001', '21324 Fannie Harbor Apt. 294South Lydafurt, LA 26044', 'Norris Fords', '773', 'Tillman Harbor', 'South Malindashire', 'Group', 'Bangladeshi', 'Islam', 'Leon Schoen', '925 Erin PineParisianburgh, NJ 96318-6820', '9723322319', '03/12/2017', '03/12/2017', 'yes', 'yes', 'yes'),
+(2, 'Pollich-Pollich', 'WF8491', 'Polly Ondricka', 'Marlin Mraz', '26-11-1978', '6410 Rose JunctionsLake Tomasa, VT 23204-3740', 'Tressie Dam', '2163', 'Flatley Keys', 'East Wilburnview', 'PLC', 'Bangladeshi', 'Islam', 'Allison Russel', '9779 Miller PineSouth Danial, ND 40147', '705073219', '03/05/2017', '06/16/2017', 'yes', 'yes', 'yes'),
+(3, 'Pollich-Pollich', 'WF8491', 'Polly Ondricka', 'Marlin Mraz', '26-11-1978', '6410 Rose JunctionsLake Tomasa, VT 23204-3740', 'Tressie Dam', '2163', 'Flatley Keys', 'East Wilburnview', 'PLC', 'Bangladeshi', 'Islam', 'Allison Russel', '9779 Miller PineSouth Danial, ND 40147', '705073219', '03/05/2017', '06/20/2017', 'yes', 'yes', 'yes'),
+(4, 'Hermann-Ortiz', 'MH35231', 'Catalina Stoltenberg IV', 'Julia Koepp DDS', '25-02-2002', '73938 Odessa Fields Suite 066New Gastonmouth, KS 85550-9951', 'Buddy Turnpike', '745', 'Kerluke Forest', 'East Shaunberg', 'LLC', 'Bangladeshi', 'Islam', 'Micah Schuppe', '8849 Collins Drive Apt. 606East Aglae, UT 93673-2233', '669299216874', '03/01/2017', '03/26/2017', 'yes', 'yes', 'yes');
 
 --
 -- Indexes for dumped tables
@@ -153,12 +143,12 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `registers`
 --
 ALTER TABLE `registers`
-  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `Id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
