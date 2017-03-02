@@ -14,7 +14,7 @@ $registers = $registration->display();
 <?php
 include_once('header.php');
 ?>
-
+        
         <div class="container tr-padding" style="color: #000;">
             <input class="glyphicon-search col-md-10" style="margin-top: 15%; margin-bottom: -176px;" placeholder="Search">
             <input class="col-md-2" style="background-color: grey; margin-top: 15%; margin-bottom: -176px;" type="button" value="Search">
