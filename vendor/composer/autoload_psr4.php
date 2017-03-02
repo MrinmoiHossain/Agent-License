@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Kilte\\Pagination\\' => array($vendorDir . '/amstaffix/pagination/source'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Agent\\' => array($baseDir . '/Src'),
 );

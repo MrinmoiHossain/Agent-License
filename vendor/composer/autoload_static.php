@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInited17fa85222a2fd66a07756b55b90d5e
 {
     public static $prefixLengthsPsr4 = array (
+        'K' => 
+        array (
+            'Kilte\\Pagination\\' => 17,
+        ),
         'F' => 
         array (
             'Faker\\' => 6,
@@ -18,6 +22,10 @@ class ComposerStaticInited17fa85222a2fd66a07756b55b90d5e
     );
 
     public static $prefixDirsPsr4 = array (
+        'Kilte\\Pagination\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/amstaffix/pagination/source',
+        ),
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',

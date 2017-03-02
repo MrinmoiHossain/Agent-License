@@ -14,5 +14,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+        <style>
+            .page{
+                display: inline;
+                color: #8a6d3b !important;
+                margin-left: -30px;
+                margin-right: 5%;
+                padding: 10px;
+                border: 1px solid gray;
+            }
+        </style>
     </head>
     <body>

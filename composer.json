@@ -6,6 +6,7 @@
   },
   "require": {
     "mpdf/mpdf": "^6.1",
-    "fzaninotto/faker": "^1.6"
+    "fzaninotto/faker": "^1.6",
+    "amstaffix/pagination": "^1.1"
   }
 }
