@@ -12,8 +12,8 @@ class Registration
 
     public function store($data){
         try{
-            $stmt = $this->con->prepare("INSERT INTO registers(CompanyName, LicenceNo, Name, FatherName, BirthDate, ResAddress, Village, PostOffice, Station, District, Education, Nationality, Religion, Bank, BankBranch, AccountNo, TodayDate, ExpDate, Photo, DeclareCon, LawDeclare) VALUES
-                                              (:CompanyName , :LicenceNo , :Name, :FatherName, :BirthDate, :ResAddress, :Village, :PostOffice, :Station, :District, :Education, :Nationality, :Religion, :Bank, :BankBranch, :AccountNo, :TodayDate, :ExpDate, :Photo, :DeclareCon, :LawDeclare)");
+            $stmt = $this->con->prepare("INSERT INTO registers(CompanyName, LicenceNo, Name, FatherName, BirthDate, ResAddress, Village, PostOffice, Station, District, Education, Nationality, Religion, Bank, BankBranch, AccountNo, TodayDate, ExpDate) VALUES
+                                              (:CompanyName , :LicenceNo , :Name, :FatherName, :BirthDate, :ResAddress, :Village, :PostOffice, :Station, :District, :Education, :Nationality, :Religion, :Bank, :BankBranch, :AccountNo, :TodayDate, :ExpDate)");
             $stmt->bindparam(":CompanyName", $data['companyName']);
             $stmt->bindparam(":LicenceNo", $data['licenceNum']);
             $stmt->bindparam(":Name", $data['name']);
@@ -32,15 +32,12 @@ class Registration
             $stmt->bindparam(":AccountNo", $data['acNo']);
             $stmt->bindparam(":TodayDate", $data['date']);
             $stmt->bindparam(":ExpDate", $data['expDate']);
-            $stmt->bindparam(":Photo", $data['photoCheck']);
-            $stmt->bindparam(":DeclareCon", $data['declareCheck']);
-            $stmt->bindparam(":LawDeclare", $data['lawCheck']);
 
 
             $result = $stmt->execute();
 
             if($result){
-                header('location:http://localhost/Agent%20Licence/Views/Registration/confirm.php');
+                header('location:http://localhost/AgentLicence/Views/Registration/confirm.php');
                 return;
             }
         }

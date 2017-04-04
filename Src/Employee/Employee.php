@@ -19,13 +19,13 @@ class Employee
         $count = true;
         while($row = $stmt->fetch(\PDO::FETCH_ASSOC)){
             if ($row['employeeName'] == $userName && $row['employeeId'] == $pass){
-                header('location:http://localhost/Agent%20Licence/Views/Login/Employee');
+                header('location:http://localhost/AgentLicence/Views/Login/Employee');
                 $count = false;
                 break;
             }
         }
         if($count){
-            header('location:http://localhost/Agent%20Licence/error.php');
+            header('location:http://localhost/AgentLicence/error.php');
         }
     }
 
@@ -40,7 +40,7 @@ class Employee
 
 
             if($result){
-                header('location:http://localhost/Agent%20Licence/Views/Employee/showEmployee.php');
+                header('location:http://localhost/AgentLicence/Views/Employee/showEmployee.php');
                 return;
             }
         }
@@ -85,7 +85,7 @@ class Employee
             $result = $stmt->execute();
 
             if($result){
-                header('location:http://localhost/Agent%20Licence/Views/Employee/updateEmployee.php');
+                header('location:http://localhost/AgentLicence/Views/Employee/updateEmployee.php');
                 return;
             }
         }
@@ -96,7 +96,7 @@ class Employee
 
     public function delete($id = null){
         if(!isset($id)){
-            header('location:http://localhost/Agent%20Licence/Views/Employee/removeEmployee.php');
+            header('location:http://localhost/AgentLicence/Views/Employee/removeEmployee.php');
             return;
         }
         try{
@@ -105,7 +105,7 @@ class Employee
             $result = $stmt->execute();
 
             if($result){
-                header('location:http://localhost/Agent%20Licence/Views/Employee/removeEmployee.php');
+                header('location:http://localhost/AgentLicence/Views/Employee/removeEmployee.php');
                 return;
             }
         }

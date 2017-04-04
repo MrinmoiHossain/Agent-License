@@ -27,7 +27,7 @@ include_once('header.php');
             <tr>
                 <td class="active"><?php echo $admin['id']; ?></td>
                 <td class="active"><?php echo $admin['userName']; ?></td>
-                <td class="active"><?php echo $admin['pass']; ?></td>
+                <td class="active"><?php echo '*****'; ?></td>
             </tr>
             <?php
         }

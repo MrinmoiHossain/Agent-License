@@ -20,13 +20,13 @@ class Admin
         $count = true;
         while($row = $stmt->fetch(\PDO::FETCH_ASSOC)){
             if ($row['userName'] == $userName && $row['pass'] == $pass){
-                header('location:http://localhost/Agent%20Licence/Views/Login/Admin');
+                header('location:http://localhost/AgentLicence/Views/Login/Admin');
                 $count = false;
                 break;
             }
         }
         if($count){
-            header('location:http://localhost/Agent%20Licence/error.php');
+            header('location:http://localhost/AgentLicence/error.php');
         }
     }
 
@@ -39,7 +39,7 @@ class Admin
 
 
             if($result){
-                header('location:http://localhost/Agent%20Licence/Views/Admin/showAdmin.php');
+                header('location:http://localhost/AgentLicence/Views/Admin/showAdmin.php');
                 return;
             }
         }
@@ -79,7 +79,7 @@ class Admin
             $result = $stmt->execute();
 
             if($result){
-                header('location:http://localhost/Agent%20Licence/Views/Admin/updateAdmin.php');
+                header('location:http://localhost/AgentLicence/Views/Admin/updateAdmin.php');
                 return;
             }
         }
@@ -89,7 +89,7 @@ class Admin
     }
     public function delete($id = null){
         if(!isset($id)){
-            header('location:http://localhost/Agent%20Licence/Views/Admin/removeAdmin.php');
+            header('location:http://localhost/AgentLicence/Views/Admin/removeAdmin.php');
             return;
         }
         try{
@@ -98,7 +98,7 @@ class Admin
             $result = $stmt->execute();
 
             if($result){
-                header('location:http://localhost/Agent%20Licence/Views/Admin/removeAdmin.php');
+                header('location:http://localhost/AgentLicence/Views/Admin/removeAdmin.php');
                 return;
             }
         }
